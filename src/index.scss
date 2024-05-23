@@ -110,7 +110,7 @@
 }
 
 .circle-content-container {
-  @include flexContainer(space-around);
+  @include flexContainer($justify: space-around);
   @media (max-width: 777px) {
     margin-top: 10px;
   }
@@ -148,6 +148,10 @@
   overflow: hidden;
   @media (max-width: 777px) {
     font-size: 10px;
+    width: 208px;
+    height: 48px;
+    gap: 0px;
+    opacity: 0px;
   }
 }
 
