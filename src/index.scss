@@ -12,7 +12,7 @@
     rgba(255, 255, 255, 0.32) 0%,
     #475fdf 100%
   );
-  @media (max-width: 777px) {
+  @media (max-width: 890px) {
     width: 328px;
     height: 352px;
   }
@@ -45,7 +45,7 @@
   height: 320px;
   padding: 6px 15.04px 21.11px 11.89px;
   margin-top: -13px;
-  @media (max-width: 777px) {
+  @media (max-width: 890px) {
     width: 328px;
     height: 320px;
     padding: 15px 12.01px 15.06px 10.66px;
@@ -59,13 +59,13 @@
   position: relative;
   top: -260px;
   left: 380px;
-  @media (max-width: 777px) {
+  @media (max-width: 940px) {
     display: none;
   }
 }
 
 @mixin arrowmedia($top) {
-  @media (max-width: 777px) {
+  @media (max-width: 921px) {
     position: absolute;
     top: $top;
     left: 345px;
@@ -85,7 +85,7 @@
   box-shadow: 0px 24px 48px 0px rgba(23, 43, 151, 0.72);
   border-radius: 10px;
   flex-wrap: wrap;
-  @media (max-width: 777px) {
+  @media (max-width: 890px) {
     width: 100%;
     margin-top: 10px;
     display: flex;
@@ -111,7 +111,7 @@
 
 .circle-content-container {
   @include flexContainer($justify: space-around);
-  @media (max-width: 777px) {
+  @media (max-width: 890px) {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -149,7 +149,7 @@
   text-align: left;
   color: #fff;
   overflow: hidden;
-  @media (max-width: 777px) {
+  @media (max-width: 890px) {
     width: 208px;
     height: 48px;
     font-family: Roboto;
@@ -177,7 +177,7 @@
   color: #fff;
   margin-left: auto;
   margin-right: auto;
-  @media (max-width: 777px) {
+  @media (max-width: 890px) {
     margin-left: 0;
     margin: 0 auto;
   }
@@ -193,7 +193,7 @@
 
 .arrowmedia-1 {
   display: none;
-  @media (max-width: 777px) {
+  @media (max-width: 700px) {
     @include arrowmedia(340px);
     display: block;
   }
@@ -201,7 +201,7 @@
 
 .arrowmedia-2 {
   display: none;
-  @media (max-width: 777px) {
+  @media (max-width: 700px) {
     @include arrowmedia(710px);
     display: block;
   }
