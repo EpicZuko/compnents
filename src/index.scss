@@ -110,6 +110,7 @@
 }
 
 .circle-content-container {
+  @include flexContainer($justify: space-around);
   @media (max-width: 777px) {
     display: flex;
     align-items: center;
