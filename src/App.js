@@ -49,7 +49,7 @@ function App() {
               <p>Получайте хороший процентот покупок по вашей ссылке!</p>
             </div>
           </div>
-          <div className="illustration-2">
+          <div className="illustration-3">
             <img src={image3} alt="Illustration" />
           </div>
         </div>

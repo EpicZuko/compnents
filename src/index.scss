@@ -4,7 +4,6 @@
   height: 352px;
   gap: 0px;
   border-radius: 20px;
-  border: 2px 0px 0px 0px;
   opacity: 0px;
   background: $bcColor;
   border: 2px solid;
@@ -14,10 +13,11 @@
     #475fdf 100%
   );
   @media (max-width: 777px) {
-    width: 400px;
+    width: 370px;
     height: 352px;
   }
 }
+
 @mixin flexContainer($justify: center) {
   display: flex;
   justify-content: $justify;
@@ -69,7 +69,7 @@
   }
 }
 .container {
-  @include flexContainer(space-around);
+  @include flexContainer($justify: space-around);
   margin: 100px auto;
   background: linear-gradient(
     180deg,
@@ -90,6 +90,7 @@
     margin-left: 20px;
   }
 }
+
 .card:nth-child(1) {
   @include cardTs(linear-gradient(180deg, #6377e1 0%, #2920a5 100%));
 }
@@ -101,23 +102,22 @@
 .card:nth-child(3) {
   @include cardTs(linear-gradient(180deg, #55ce00 0%, #014d1d 100%));
 }
-
 .circle-content-container {
-  @include flexContainer(space-around);
+  @include flexContainer($justify: space-around);
   @media (max-width: 777px) {
     margin-top: 10px;
   }
 }
 .circle-1 {
-  @include flexContainer(center);
+  @include flexContainer($justify: center);
   @include bcCircle(linear-gradient(180deg, #2920a5 0%, #6377e1 100%));
 }
 .circle-2 {
-  @include flexContainer(center);
+  @include flexContainer($justify: center);
   @include bcCircle(linear-gradient(180deg, #741595 0%, #e163e1 100%));
 }
 .circle-3 {
-  @include flexContainer(center);
+  @include flexContainer($justify: center);
   @include bcCircle(linear-gradient(180deg, #014d1d 0%, #55ce00 100%));
 }
 .illustration-1 {
@@ -126,36 +126,28 @@
 .illustration-2 {
   @include bcImg();
 }
-.illustration-2 {
+.illustration-3 {
   @include bcImg();
 }
 .content p {
   width: 299px;
   height: 48px;
-  gap: 0px;
   opacity: 0px;
   font-family: Roboto;
   font-size: 20px;
   font-weight: 700;
   line-height: 24px;
   text-align: left;
-  margin-left: 0px;
   color: #fff;
   overflow: hidden;
   @media (max-width: 777px) {
-    font-family: Roboto;
     font-size: 10px;
-    font-weight: 700;
-    line-height: 24px;
-    text-align: left;
-    margin-right: 0px;
   }
 }
 .btn {
-  @include flexContainer(space-around);
+  @include flexContainer($justify: space-around);
   width: 220px;
   height: 48px;
-  gap: 0px;
   border-radius: 16px;
   font-family: Roboto;
   font-size: 16px;
