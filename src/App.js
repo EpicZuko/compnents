@@ -1,4 +1,3 @@
-import React, { useEffect } from "react";
 import "./App.css";
 import image from "./assets/img/Image.png";
 import image2 from "./assets/img/Image (1).png";
@@ -7,32 +6,7 @@ import icon from "./assets/img/shopping_cart.png";
 import iconarrow from "./assets/img/arrow.png";
 import iconarrowmedia from "./assets/img/arrow (1).png";
 
-const App = () => {
-  useEffect(() => {
-    const websocketUrl = process.env.REACT_APP_WEBSOCKET_URL;
-    const ws = new WebSocket(websocketUrl);
-
-    ws.onopen = () => {
-      console.log("WebSocket connection established");
-    };
-
-    ws.onerror = (error) => {
-      console.error("WebSocket error:", error);
-    };
-
-    ws.onmessage = (message) => {
-      console.log("WebSocket message:", message.data);
-    };
-
-    ws.onclose = () => {
-      console.log("WebSocket connection closed");
-    };
-
-    return () => {
-      ws.close();
-    };
-  }, []);
-
+function App() {
   return (
     <>
       <div className="container">
@@ -47,12 +21,8 @@ const App = () => {
             <img src={image} alt="Illustration" />
           </div>
           <div>
-            <img className="arrow" src={iconarrow} alt="arrow" />
-            <img
-              className="arrowmedia-1"
-              src={iconarrowmedia}
-              alt="arrow media"
-            />
+            <img className="arrow" src={iconarrow} alt="" />
+            <img className="arrowmedia-1" src={iconarrowmedia} alt="" />
           </div>
         </div>
 
@@ -60,19 +30,15 @@ const App = () => {
           <div className="circle-content-container">
             <div className="circle circle-2">2</div>
             <div className="content">
-              <p>Расскажите о iiii.COM</p>
+              <p>Расскажитео iiii.COM</p>
             </div>
           </div>
           <div className="illustration-2">
             <img src={image2} alt="Illustration" />
           </div>
           <div>
-            <img className="arrow-2" src={iconarrow} alt="arrow" />
-            <img
-              className="arrowmedia-2"
-              src={iconarrowmedia}
-              alt="arrow media"
-            />
+            <img className="arrow-2" src={iconarrow} alt="" />
+            <img className="arrowmedia-2" src={iconarrowmedia} alt="" />
           </div>
         </div>
 
@@ -80,7 +46,7 @@ const App = () => {
           <div className="circle-content-container">
             <div className="circle circle-3">3</div>
             <div className="content">
-              <p>Получайте хороший процент от покупок по вашей ссылке!</p>
+              <p>Получайте хороший процентот покупок по вашей ссылке!</p>
             </div>
           </div>
           <div className="illustration-2">
@@ -89,10 +55,10 @@ const App = () => {
         </div>
       </div>
       <button className="btn">
-        <img src={icon} alt="shopping cart" /> Стать партнером
+        <img src={icon} alt="" /> Стать партнером
       </button>
     </>
   );
-};
+}
 
 export default App;

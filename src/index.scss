@@ -1,11 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
 @mixin cardTs($bcColor) {
   width: 419px;
   height: 352px;
   gap: 0px;
   border-radius: 20px;
-  border: 2px 0px 0px 0px;
-  opacity: 0px;
   background: $bcColor;
   border: 2px solid;
   border-image-source: linear-gradient(
@@ -14,29 +13,33 @@
     #475fdf 100%
   );
   @media (max-width: 777px) {
-    width: 400px;
+    width: 328px;
     height: 352px;
   }
 }
+
 @mixin flexContainer($justify: center) {
   display: flex;
   justify-content: $justify;
   align-items: center;
 }
+
 @mixin bcCircle($background) {
   width: 48px;
   height: 48px;
   gap: 0px;
-  opacity: 0px;
   border-radius: 50%;
   background: $background;
   font-family: Roboto;
   font-size: 20px;
   font-weight: bold;
   margin-bottom: 20px;
-  box-sizing: border-box;
   color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
+
 @mixin bcImg() {
   width: 419px;
   height: 320px;
@@ -46,13 +49,12 @@
     width: 328px;
     height: 320px;
     padding: 15px 12.01px 15.06px 10.66px;
-    gap: 0px;
-    opacity: 0px;
     display: flex;
     align-items: center;
     justify-content: center;
   }
 }
+
 @mixin arrow() {
   position: relative;
   top: -260px;
@@ -61,6 +63,7 @@
     display: none;
   }
 }
+
 @mixin arrowmedia($top) {
   @media (max-width: 777px) {
     position: absolute;
@@ -68,6 +71,7 @@
     left: 345px;
   }
 }
+
 .container {
   @include flexContainer(space-around);
   margin: 100px auto;
@@ -90,14 +94,17 @@
     margin-left: 20px;
   }
 }
+
 .card:nth-child(1) {
   @include cardTs(linear-gradient(180deg, #6377e1 0%, #2920a5 100%));
 }
+
 .card:nth-child(2) {
   @include cardTs(linear-gradient(180deg, #e163e1 0%, #741595 100%));
   margin-top: 20px;
   margin-bottom: 20px;
 }
+
 .card:nth-child(3) {
   @include cardTs(linear-gradient(180deg, #55ce00 0%, #014d1d 100%));
 }
@@ -108,59 +115,49 @@
     margin-top: 10px;
   }
 }
+
 .circle-1 {
-  @include flexContainer(center);
   @include bcCircle(linear-gradient(180deg, #2920a5 0%, #6377e1 100%));
 }
+
 .circle-2 {
-  @include flexContainer(center);
   @include bcCircle(linear-gradient(180deg, #741595 0%, #e163e1 100%));
 }
+
 .circle-3 {
-  @include flexContainer(center);
   @include bcCircle(linear-gradient(180deg, #014d1d 0%, #55ce00 100%));
 }
+
 .illustration-1 {
   @include bcImg();
 }
+
 .illustration-2 {
   @include bcImg();
 }
-.illustration-2 {
-  @include bcImg();
-}
+
 .content p {
   width: 299px;
-  height: 48px;
-  gap: 0px;
-  opacity: 0px;
   font-family: Roboto;
   font-size: 20px;
   font-weight: 700;
   line-height: 24px;
   text-align: left;
-  margin-left: 0px;
   color: #fff;
   overflow: hidden;
   @media (max-width: 777px) {
-    font-family: Roboto;
     font-size: 10px;
-    font-weight: 700;
-    line-height: 24px;
-    text-align: left;
-    margin-right: 0px;
   }
 }
+
 .btn {
   @include flexContainer(space-around);
   width: 220px;
   height: 48px;
-  gap: 0px;
   border-radius: 16px;
   font-family: Roboto;
   font-size: 16px;
   font-weight: 400;
-  line-height: 16px;
   text-align: center;
   background: linear-gradient(180deg, #5dc416 0%, #367b05 100%);
   border: 3px solid rgba(149, 255, 75, 0.64);
@@ -168,18 +165,22 @@
   cursor: pointer;
   outline: none;
   color: #fff;
-  margin-left: 60%;
+  margin-left: auto;
+  margin-right: auto;
   @media (max-width: 777px) {
-    margin-left: 0%;
+    margin-left: 0;
     margin: 0 auto;
   }
 }
+
 .arrow {
   @include arrow();
 }
+
 .arrow-2 {
   @include arrow();
 }
+
 .arrowmedia-1 {
   display: none;
   @media (max-width: 777px) {
@@ -187,6 +188,7 @@
     display: block;
   }
 }
+
 .arrowmedia-2 {
   display: none;
   @media (max-width: 777px) {
